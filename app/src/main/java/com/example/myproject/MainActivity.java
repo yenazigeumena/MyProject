@@ -1,7 +1,11 @@
 package com.example.myproject;
 
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -12,10 +16,13 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity{
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         RecyclerView recyclerView = findViewById(R.id.gridRecyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
         List<Items> itemsList = new ArrayList<>();
@@ -26,8 +33,8 @@ public class MainActivity extends AppCompatActivity{
         ItemAdapter adapter = new ItemAdapter(this, itemsList);
         recyclerView.setAdapter(adapter);
 
-        ViewPager2 viewPager = findViewById(R.id.viewPager2);
 
+        ViewPager2 viewPager = findViewById(R.id.viewPager2);
         List<BannerItem> bannerItems = new ArrayList<>();
         bannerItems.add(new BannerItem(R.drawable.first));
         bannerItems.add(new BannerItem(R.drawable.second));
@@ -35,11 +42,21 @@ public class MainActivity extends AppCompatActivity{
         bannerItems.add(new BannerItem(R.drawable.fourth));
         bannerItems.add(new BannerItem(R.drawable.fifth));
 
-        // 추가 이미지...
-
         // Adapter 설정
         BannerAdapter bannerAdapter = new BannerAdapter(this, bannerItems);
         viewPager.setAdapter(bannerAdapter);
+
+        ImageView PerB = findViewById(R.id.personal);
+
+        PerB.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(getApplicationContext(), Personal.class);
+                startActivity(intent);
+            }
+        });
+
+
     }
 
 }
