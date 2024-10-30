@@ -6,6 +6,6 @@
     tools:context=".MainActivity">
 
     <include
-        layout="@layout/common_layout" />
+        layout="@layout/common_list_layout" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

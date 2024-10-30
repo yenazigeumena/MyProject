@@ -32,6 +32,7 @@ public class Gym extends BaseActivity{
         ListView listView = findViewById(R.id.listView);
         listView.setAdapter(adapter);
 
+//        setupDropdownMenu("gym");
     }
 
 }
