@@ -17,7 +17,7 @@ public class Gym extends BaseActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.gym);
+        setContentView(R.layout.common_list_layout);
         TextView tvAddress = findViewById(R.id.tv_address);
         tvAddress.setText("헬스장");
         setPersonalButtonClickListener(R.id.imageView);
@@ -31,6 +31,16 @@ public class Gym extends BaseActivity{
         // ListView와 어댑터 연결
         ListView listView = findViewById(R.id.listView);
         listView.setAdapter(adapter);
+
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Intent intent = new Intent(getApplicationContext(), Gym_detail1.class);
+                startActivity(intent);
+            }
+        });
+
 
 //        setupDropdownMenu("gym");
     }
