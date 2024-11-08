@@ -13,7 +13,7 @@ public class Pila extends BaseActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.pila);
+        setContentView(R.layout.common_list_layout);
         TextView tvAddress = findViewById(R.id.tv_address);
         tvAddress.setText("필라테스");
         setPersonalButtonClickListener(R.id.imageView);

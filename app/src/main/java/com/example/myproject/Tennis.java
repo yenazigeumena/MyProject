@@ -10,7 +10,7 @@ public class Tennis extends MainActivity{
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tennis);
+        setContentView(R.layout.common_list_layout);
         TextView tvAddress = findViewById(R.id.tv_address);
         tvAddress.setText("테니스");
 

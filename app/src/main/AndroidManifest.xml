@@ -32,6 +32,7 @@
         <activity android:name=".Tennis"/>
         <activity android:name=".Personal"/>
         <activity android:name=".BaseActivity"/>
+        <activity android:name=".Gym_detail1"/>
     </application>
 
 </manifest>
