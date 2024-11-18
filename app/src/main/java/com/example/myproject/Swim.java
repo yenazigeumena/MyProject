@@ -1,6 +1,9 @@
 package com.example.myproject;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -23,5 +26,15 @@ public class Swim extends MainActivity{
         // ListView와 어댑터 연결
         ListView listView = findViewById(R.id.listView);
         listView.setAdapter(adapter);
+
+        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Store clickedStore = stores.get(i);
+                Intent intent = new Intent(getApplicationContext(), Swim_detail.class);
+                intent.putExtra("STORE_NAME", clickedStore.getName());  // 업체 이름 전달
+                startActivity(intent);
+            }
+        });
     }
 }

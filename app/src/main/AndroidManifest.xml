@@ -33,6 +33,9 @@
         <activity android:name=".Personal"/>
         <activity android:name=".BaseActivity"/>
         <activity android:name=".Gym_detail1"/>
+        <activity android:name=".Pila_detail"/>
+        <activity android:name=".Swim_detail"/>
+        <activity android:name=".Tennis_detail"/>
     </application>
 
 </manifest>
