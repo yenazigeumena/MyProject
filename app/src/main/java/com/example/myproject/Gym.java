@@ -33,10 +33,13 @@ public class Gym extends BaseActivity{
         listView.setAdapter(adapter);
 
 
+        //상세페이지로 넘어감
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Store clickedStore = stores.get(i);
                 Intent intent = new Intent(getApplicationContext(), Gym_detail1.class);
+                intent.putExtra("STORE_NAME", clickedStore.getName());  // 헬스장 이름 전달
                 startActivity(intent);
             }
         });
