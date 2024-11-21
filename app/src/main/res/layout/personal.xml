@@ -61,7 +61,7 @@
                     android:textColor="@android:color/black"/>
 
                 <Button
-                    android:id="@+id/card_registration"
+                    android:id="@+id/card_charge"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="포인트 충전"
