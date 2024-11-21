@@ -36,6 +36,7 @@
         <activity android:name=".Pila_detail"/>
         <activity android:name=".Swim_detail"/>
         <activity android:name=".Tennis_detail"/>
+        <activity android:name=".CardCharge"/>
     </application>
 
 </manifest>
