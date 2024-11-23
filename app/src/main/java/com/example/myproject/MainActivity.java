@@ -16,6 +16,8 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity{
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -45,14 +47,15 @@ public class MainActivity extends AppCompatActivity{
         viewPager.setAdapter(bannerAdapter);
 
         ImageView PerB = findViewById(R.id.personal);
-
         PerB.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(getApplicationContext(), Personal.class);
+                Intent intent = new Intent(getApplicationContext(), Join.class);
                 startActivity(intent);
             }
         });
+
+
 
 
     }
