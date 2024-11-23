@@ -37,6 +37,8 @@
         <activity android:name=".Swim_detail"/>
         <activity android:name=".Tennis_detail"/>
         <activity android:name=".CardCharge"/>
+        <activity android:name=".Join"/>
+        <activity android:name=".JoinDetail"/>
     </application>
 
 </manifest>
