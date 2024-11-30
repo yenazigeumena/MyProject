@@ -4,7 +4,9 @@ package com.example.myproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
@@ -22,6 +24,21 @@ public class MainActivity extends AppCompatActivity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        EditText searchEditText = findViewById(R.id.searchbox);
+        ImageView searchButton = findViewById(R.id.searchBtn);
+
+        searchButton.setOnClickListener(view -> {
+                    String query = searchEditText.getText().toString().trim();
+                    if (!query.isEmpty()) {
+                        // 검색 결과 화면으로 이동
+                        Intent intent = new Intent(MainActivity.this, SearchResults.class);
+                        intent.putExtra("query", query); // 검색어 전달
+                        startActivity(intent);
+                    } else {
+                        Toast.makeText(MainActivity.this, "검색어를 입력해주세요.", Toast.LENGTH_SHORT).show();
+                    }
+                });
 
         RecyclerView recyclerView = findViewById(R.id.gridRecyclerView);
         recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
