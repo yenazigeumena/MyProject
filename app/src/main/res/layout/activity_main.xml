@@ -151,27 +151,32 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/gridRecyclerView">
 
-                <TextView
-                    android:id="@+id/textView2"
+                <EditText
+                    android:id="@+id/searchbox"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginStart="20dp"
                     android:layout_marginTop="10dp"
+                    android:layout_marginEnd="40dp"
                     android:layout_marginBottom="10dp"
-                    android:text="우리동네 운동 검색"
+                    android:hint="우리동네 운동 검색"
                     android:textSize="18sp"
+                    android:background="@null"
+                    android:minHeight="48dp"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    app:layout_constraintTop_toTopOf="parent"
+                    />
 
                 <ImageView
+                    android:id="@+id/searchBtn"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="5dp"
                     android:src="@drawable/baseline_search_24"
-                    app:layout_constraintBottom_toBottomOf="@+id/textView2"
+                    app:layout_constraintBottom_toBottomOf="@+id/searchbox"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="@+id/textView2" />
+                    app:layout_constraintTop_toTopOf="@+id/searchbox" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
