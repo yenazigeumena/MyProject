@@ -60,7 +60,7 @@ public class SearchResults extends AppCompatActivity {
 
     // 더미 데이터 생성
     private void initializeStoreData(List<Store> storeList) {
-        storeList.add(new Store("gym", "★ 4.5 (100+)", R.drawable.gym));
+        storeList.add(new Store("고릴라짐", "★ 4.5 (100+)", R.drawable.gym));
         storeList.add(new Store("피트니스넘버원", "★ 4.5 (100+)", R.drawable.gym));
         storeList.add(new Store("백석필라테스", "★ 4.5 (100+)", R.drawable.pila));
         storeList.add(new Store("짱짱필라테스", "★ 4.5 (100+)", R.drawable.pila));
