@@ -3,7 +3,7 @@ package com.example.myproject;
 public class Store {
 
     private String name;
-    private String rating;
+    private String  rating;
     private int imageResource;;
 
     public Store(String name, String rating, int imageResource) {
@@ -12,7 +12,7 @@ public class Store {
         this.imageResource = imageResource;
     }
 
-    public String getRating() {
+    public String  getRating() {
         return rating;
     }
 

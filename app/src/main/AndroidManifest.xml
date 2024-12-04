@@ -39,6 +39,7 @@
         <activity android:name=".CardCharge"/>
         <activity android:name=".Join"/>
         <activity android:name=".JoinDetail"/>
+        <activity android:name=".SearchResults"/>
     </application>
 
 </manifest>
